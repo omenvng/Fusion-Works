@@ -13,7 +13,8 @@ function MyFunction(){
   
 MyFunction();
 
-let s = new Set();
-const arr= Array.from({length:1000},()=>Math.round(Math.random()*900+1)).forEach((e) => s.add(e)).size;
 
-console.log(arr);
+const arr= Array.from({length:1000},()=>Math.round(Math.random()*900+1));
+let s = new Set();
+arr.forEach((e) => s.add(e));
+console.log(s.size);
